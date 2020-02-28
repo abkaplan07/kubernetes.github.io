@@ -376,7 +376,7 @@ NodeController is responsible for adding taints corresponding to node problems l
 node unreachable or not ready. See [this documentation](/docs/concepts/configuration/taint-and-toleration/)
 for details about `NoExecute` taints and the alpha feature.
 -->
-从 Kubernetes 1.6 开始，NodeController 还负责驱逐运行在拥有 `NoExecute` 污点的节点上的 pods，如果这些 pods 没有容忍这些污点。此外，作为一个默认禁用的 alpha 特性，NodeController 还负责根据节点故障（例如节点不可访问或没有 ready）添加污点。请查看[这个文档](/docs/concepts/configuration/assign-pod-node/#taints-and-tolerations-beta-feature)了解关于 `NoExecute` 污点和这个 alpha 特性。
+从 Kubernetes 1.6 开始，NodeController 还负责驱逐运行在拥有 `NoExecute` 污点的节点上的 pods，如果这些 pods 没有容忍这些污点。此外，作为一个默认禁用的 alpha 特性，NodeController 还负责根据节点故障（例如节点不可访问或没有 ready）添加污点。请查看[这个文档](/docs/concepts/scheduling-eviction/assign-pod-node/#taints-and-tolerations-beta-feature)了解关于 `NoExecute` 污点和这个 alpha 特性。
 
 
 <!--

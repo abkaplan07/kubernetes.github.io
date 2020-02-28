@@ -97,8 +97,8 @@ membuat Pod dengan nilai yang berbeda di sebuah Node untuk _testing_.
 
 Jika kamu menspesifikasikan `.spec.template.spec.nodeSelector`, maka _controller_ DaemonSet akan
 membuat Pod pada Node yang cocok dengan [selektor
-Node](/docs/concepts/configuration/assign-pod-node/). Demikian juga, jika kamu menspesifikasikan `.spec.template.spec.affinity`,
-maka _controller_ DaemonSet akan membuat Pod pada Node yang cocok dengan [Node affinity](/docs/concepts/configuration/assign-pod-node/).
+Node](/docs/concepts/scheduling-eviction/assign-pod-node/). Demikian juga, jika kamu menspesifikasikan `.spec.template.spec.affinity`,
+maka _controller_ DaemonSet akan membuat Pod pada Node yang cocok dengan [Node affinity](/docs/concepts/scheduling-eviction/assign-pod-node/).
 Jika kamu tidak menspesifikasikan sama sekali, maka _controller_ DaemonSet akan
 membuat Pod pada semua Node.
 

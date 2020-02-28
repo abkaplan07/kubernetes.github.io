@@ -199,6 +199,6 @@ selector:
 #### Seleccionar conjuntos de objetos
 
 Un caso de uso de selección basada en etiquetas es la posibilidad de limitar los nodos en los que un pod puede desplegarse.
-Ver la documentación sobre [selección de nodo](/docs/concepts/configuration/assign-pod-node/) para más información.
+Ver la documentación sobre [selección de nodo](/docs/concepts/scheduling-eviction/assign-pod-node/) para más información.
 
 {{% /capture %}}

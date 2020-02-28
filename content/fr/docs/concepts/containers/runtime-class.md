@@ -57,7 +57,7 @@ Comme c'est une fonctionnalité alpha, tous les CRI ne prennent pas encore en ch
 {{< note >}}
 La RuntimeClass suppose actuellement une configuration de nœud homogène sur l'ensemble du cluster
 (ce qui signifie que tous les nœuds sont configurés de la même manière en ce qui concerne les environnements d'exécution de conteneur). Toute hétérogénéité (configuration variable) doit être
-gérée indépendamment de RuntimeClass via des fonctions de planification (scheduling features) (voir [Affectation de pods sur les nœuds](/docs/concepts/configuration/assign-pod-node/)).
+gérée indépendamment de RuntimeClass via des fonctions de planification (scheduling features) (voir [Affectation de pods sur les nœuds](/docs/concepts/scheduling-eviction/assign-pod-node/)).
 {{< /note >}}
 
 Les configurations ont un nom `RuntimeHandler` correspondant , référencé par la RuntimeClass.

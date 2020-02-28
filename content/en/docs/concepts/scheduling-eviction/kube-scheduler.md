@@ -1,7 +1,7 @@
 ---
 title: Kubernetes Scheduler
 content_template: templates/concept
-weight: 60
+weight: 20
 ---
 
 {{% capture overview %}}
@@ -158,7 +158,7 @@ kube-scheduler has a default set of scheduling policies.
 
 - `NodeAffinityPriority`: Prioritizes nodes according to node affinity scheduling
    preferences indicated in PreferredDuringSchedulingIgnoredDuringExecution.
-   You can read more about this in [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/).
+   You can read more about this in [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/).
 
 - `TaintTolerationPriority`: Prepares the priority list for all the nodes, based on
   the number of intolerable taints on the node. This policy adjusts a node's rank
@@ -174,7 +174,7 @@ kube-scheduler has a default set of scheduling policies.
   that the Service becomes more resilient to a single Node failure.
 
 - `CalculateAntiAffinityPriorityMap`: This policy helps implement
-  [pod anti-affinity](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity).
+  [pod anti-affinity](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity).
 
 - `EqualPriorityMap`: Gives an equal weight of one to all nodes.
 

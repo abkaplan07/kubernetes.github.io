@@ -370,9 +370,9 @@ selector:
 
 <!--
 One use case for selecting over labels is to constrain the set of nodes onto which a pod can schedule.
-See the documentation on [node selection](/docs/concepts/configuration/assign-pod-node/) for more information.
+See the documentation on [node selection](/docs/concepts/scheduling-eviction/assign-pod-node/) for more information.
 -->
 通过标签进行选择的一个用例是确定节点集，方便 pod 调度。
-有关更多信息，请参阅 [选择节点](/docs/concepts/configuration/assign-pod-node/) 上的文档。
+有关更多信息，请参阅 [选择节点](/docs/concepts/scheduling-eviction/assign-pod-node/) 上的文档。
 
 {{% /capture %}}

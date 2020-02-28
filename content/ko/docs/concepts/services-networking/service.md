@@ -850,7 +850,7 @@ NLB는 특정 인스턴스 클래스에서만 작동한다. 지원되는 인스�
 헬스 체크에 실패하고 트래픽을 수신하지 못하게 된다.
 
 트래픽을 균일하게 하려면, DaemonSet을 사용하거나,
-[파드 안티어피니티(pod anti-affinity)](/ko/docs/concepts/configuration/assign-pod-node/#어피니티-affinity-와-안티-어피니티-anti-affinity)
+[파드 안티어피니티(pod anti-affinity)](/ko/docs/concepts/scheduling-eviction/assign-pod-node/#어피니티-affinity-와-안티-어피니티-anti-affinity)
 를 지정하여 동일한 노드에 위치하지 않도록 한다.
 
 [내부 로드 밸런서](/ko/docs/concepts/services-networking/service/#internal-load-balancer) 어노테이션과 함께 NLB 서비스를

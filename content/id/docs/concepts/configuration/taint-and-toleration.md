@@ -6,7 +6,7 @@ weight: 40
 
 
 {{% capture overview %}}
-Afinitas Node, seperti yang dideskripsikan [di sini](/docs/concepts/configuration/assign-pod-node/#node-affinity-beta-feature),
+Afinitas Node, seperti yang dideskripsikan [di sini](/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity-beta-feature),
 adalah salah satu properti dari Pod yang menyebabkan pod tersebut memiliki preferensi
 untuk ditempatkan di sekelompok Node tertentu (preferensi ini dapat berupa _soft constraints_ atau
 _hard constraints_ yang harus dipenuhi). _Taint_ merupakan kebalikan dari afinitas --

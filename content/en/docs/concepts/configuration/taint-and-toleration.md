@@ -10,7 +10,7 @@ weight: 40
 
 
 {{% capture overview %}}
-Node affinity, described [here](/docs/concepts/configuration/assign-pod-node/#node-affinity-beta-feature),
+Node affinity, described [here](/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity-beta-feature),
 is a property of *pods* that *attracts* them to a set of nodes (either as a
 preference or a hard requirement). Taints are the opposite -- they allow a
 *node* to *repel* a set of pods.

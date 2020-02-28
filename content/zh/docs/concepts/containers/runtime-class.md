@@ -280,10 +280,10 @@ by each.
 
 <!--
 To learn more about configuring the node selector and tolerations, see [Assigning Pods to
-Nodes](/docs/concepts/configuration/assign-pod-node/).
+Nodes](/docs/concepts/scheduling-eviction/assign-pod-node/).
 -->
 更多有关 node selector 和 tolerations 的配置信息，请查阅 
-[Assigning Pods to Nodes](/docs/concepts/configuration/assign-pod-node/)。
+[Assigning Pods to Nodes](/docs/concepts/scheduling-eviction/assign-pod-node/)。
 
 [admission controller]: /docs/reference/access-authn-authz/admission-controllers/
 

@@ -260,16 +260,16 @@ will delay the binding and provisioning of a PersistentVolume until a Pod using 
 PersistentVolumes will be selected or provisioned conforming to the topology that is
 specified by the Pod's scheduling constraints. These include, but are not limited to, [resource
 requirements](/docs/concepts/configuration/manage-compute-resources-container),
-[node selectors](/docs/concepts/configuration/assign-pod-node/#nodeselector),
+[node selectors](/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector),
 [pod affinity and
-anti-affinity](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity),
+anti-affinity](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity),
 and [taints and tolerations](/docs/concepts/configuration/taint-and-toleration).
 -->
 集群管理员可以通过指定 `WaitForFirstConsumer` 模式来解决此问题。
 该模式将延迟 PersistentVolume 的绑定和分配，直到使用该 PersistentVolumeClaim 的 Pod 被创建。
 PersistentVolume 会根据 Pod 调度约束指定的拓扑来选择或分配。这些包括但不限于 [资源需求](/docs/concepts/configuration/manage-compute-resources-container)，
-[节点筛选器](/docs/concepts/configuration/assign-pod-node/#nodeselector)，
-[pod 亲和性和互斥性](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity),
+[节点筛选器](/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)，
+[pod 亲和性和互斥性](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity),
 以及 [污点和容忍度](/docs/concepts/configuration/taint-and-toleration).
 
 <!--

@@ -7,12 +7,12 @@ weight: 40
 
 {{% capture overview %}}
 <!--
-Node affinity, described [here](/docs/concepts/configuration/assign-pod-node/#node-affinity-beta-feature),
+Node affinity, described [here](/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity-beta-feature),
 is a property of *pods* that *attracts* them to a set of nodes (either as a
 preference or a hard requirement). Taints are the opposite -- they allow a
 *node* to *repel* a set of pods.
 -->
-节点亲和性（详见[这里](/docs/concepts/configuration/assign-pod-node/#node-affinity-beta-feature)），是 *pod* 的一种属性（偏好或硬性要求），它使 *pod* 被吸引到一类特定的节点。Taint 则相反，它使 *节点* 能够 *排斥* 一类特定的 pod。
+节点亲和性（详见[这里](/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity-beta-feature)），是 *pod* 的一种属性（偏好或硬性要求），它使 *pod* 被吸引到一类特定的节点。Taint 则相反，它使 *节点* 能够 *排斥* 一类特定的 pod。
 
 <!--
 Taints and tolerations work together to ensure that pods are not scheduled

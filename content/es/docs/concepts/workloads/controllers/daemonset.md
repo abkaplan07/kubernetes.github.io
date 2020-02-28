@@ -94,9 +94,9 @@ operación. Un caso donde puede que necesites hacer esto es cuando quieres crear
 ### Ejecutar Pods sólo en algunos Nodos
 
 Si se configura un `.spec.template.spec.nodeSelector`, entonces el controlador del DaemonSet
- creará los Pods en aquellos nodos que coincidan con el [selector de nodo](/docs/concepts/configuration/assign-pod-node/) indicado. 
+ creará los Pods en aquellos nodos que coincidan con el [selector de nodo](/docs/concepts/scheduling-eviction/assign-pod-node/) indicado. 
  De forma similar, si se configura una `.spec.template.spec.affinity`,
-entonces el controlador del DaemonSet creará los Pods en aquellos nodos que coincidan con la [afinidad de nodo](/docs/concepts/configuration/assign-pod-node/) indicada.
+entonces el controlador del DaemonSet creará los Pods en aquellos nodos que coincidan con la [afinidad de nodo](/docs/concepts/scheduling-eviction/assign-pod-node/) indicada.
 Si no se configura ninguno de los dos, entonces el controlador del DaemonSet creará los Pods en todos los nodos.
 
 ## Cómo se planifican los Pods procesos

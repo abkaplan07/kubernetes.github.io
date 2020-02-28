@@ -1355,7 +1355,7 @@ the NLB Target Group's health check on the auto-assigned
 `.spec.healthCheckNodePort` and not receive any traffic.
 
 In order to achieve even traffic, either use a DaemonSet, or specify a
-[pod anti-affinity](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity)
+[pod anti-affinity](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)
 to not locate on the same node.
 
 You can also use NLB Services with the [internal load balancer](/docs/concepts/services-networking/service/#internal-load-balancer)
@@ -1370,7 +1370,7 @@ groups are modified with the following IP rules:
 通过将 `.spec.externalTrafficPolicy` 设置为 `Local`，客户端IP地址将传播到终端 Pod，但这可能导致流量分配不均。
 没有针对特定 LoadBalancer 服务的任何 Pod 的节点将无法通过自动分配的 `.spec.healthCheckNodePort` 进行 NLB 目标组的运行状况检查，并且不会收到任何流量。
 
-为了获得平均流量，请使用DaemonSet或指定 [pod anti-affinity](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity)使其不在同一节点上。
+为了获得平均流量，请使用DaemonSet或指定 [pod anti-affinity](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)使其不在同一节点上。
 
 您还可以将NLB服务与 [内部负载平衡器](/docs/concepts/services-networking/service/#internal-load-balancer)批注一起使用。
 

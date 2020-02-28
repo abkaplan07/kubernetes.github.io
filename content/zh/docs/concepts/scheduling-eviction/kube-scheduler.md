@@ -1,7 +1,7 @@
 ---
 title: Kubernetes 调度器
 content_template: templates/concept
-weight: 60
+weight: 20
 ---
 
 <!--
@@ -256,7 +256,7 @@ kube-scheduler 有一系列的默认调度策略。
 
 - `NodeAffinityPriority`: Prioritizes nodes according to node affinity scheduling
    preferences indicated in PreferredDuringSchedulingIgnoredDuringExecution.
-   You can read more about this in [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
+   You can read more about this in [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
 
 - `TaintTolerationPriority`: Prepares the priority list for all the nodes, based on
   the number of intolerable taints on the node. This policy adjusts a node's rank
@@ -272,7 +272,7 @@ kube-scheduler 有一系列的默认调度策略。
   that the Service becomes more resilient to a single Node failure.
 
 - `CalculateAntiAffinityPriorityMap`: This policy helps implement
-  [pod anti-affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity).
+  [pod anti-affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity).
 
 - `EqualPriorityMap`: Gives an equal weight of one to all nodes.
 -->
@@ -294,7 +294,7 @@ kube-scheduler 有一系列的默认调度策略。
   计算其优先级。使用这个策略可以将两个不同 Pod 运行在不同的 Node 上。
 
 - `NodeAffinityPriority`：基于 Pod 属性中 PreferredDuringSchedulingIgnoredDuringExecution 来进行 Node 亲和性调度。你可以通过这篇文章
-  [Pods 到 Nodes 的分派](/zh/docs/concepts/configuration/assign-pod-node/) 来了解到更详细的内容。
+  [Pods 到 Nodes 的分派](/zh/docs/concepts/scheduling-eviction/assign-pod-node/) 来了解到更详细的内容。
 
 - `TaintTolerationPriority`：基于 Pod 中对每个 Node 上污点容忍程度进行优先级评估，这个策略能够调整待选 Node 的排名。
 
@@ -304,7 +304,7 @@ kube-scheduler 有一系列的默认调度策略。
   没有归属于同一个 Service 的 Pod，这个策略更倾向于将 Pod 调度到这类 Node 上。最终的目的：即使在一个 Node 宕机之后 Service 也具有很强容灾能力。
 
 - `CalculateAntiAffinityPriorityMap`：这个策略主要是用来实现[pod反亲和]
-  (/zh/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity)。
+  (/zh/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)。
 
 - `EqualPriorityMap`：将所有的 Node 设置成相同的权重为 1。
 

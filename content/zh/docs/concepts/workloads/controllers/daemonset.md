@@ -178,11 +178,11 @@ create a Pod with a different value on a node for testing.
 <!--
 If you specify a `.spec.template.spec.nodeSelector`, then the DaemonSet controller will
 create Pods on nodes which match that [node
-selector](/docs/concepts/configuration/assign-pod-node/). Likewise if you specify a `.spec.template.spec.affinity`,
-then DaemonSet controller will create Pods on nodes which match that [node affinity](/docs/concepts/configuration/assign-pod-node/).
+selector](/docs/concepts/scheduling-eviction/assign-pod-node/). Likewise if you specify a `.spec.template.spec.affinity`,
+then DaemonSet controller will create Pods on nodes which match that [node affinity](/docs/concepts/scheduling-eviction/assign-pod-node/).
 If you do not specify either, then the DaemonSet controller will create Pods on all nodes.
 -->
-如果指定了 `.spec.template.spec.nodeSelector`，DaemonSet Controller 将在能够与 [Node Selector](/docs/concepts/configuration/assign-pod-node/) 匹配的节点上创建 Pod。类似这种情况，可以指定 `.spec.template.spec.affinity`，然后 DaemonSet Controller 将在能够与 [node Affinity](/docs/concepts/configuration/assign-pod-node/) 匹配的节点上创建 Pod。
+如果指定了 `.spec.template.spec.nodeSelector`，DaemonSet Controller 将在能够与 [Node Selector](/docs/concepts/scheduling-eviction/assign-pod-node/) 匹配的节点上创建 Pod。类似这种情况，可以指定 `.spec.template.spec.affinity`，然后 DaemonSet Controller 将在能够与 [node Affinity](/docs/concepts/scheduling-eviction/assign-pod-node/) 匹配的节点上创建 Pod。
 如果根本就没有指定，则 DaemonSet Controller 将在所有节点上创建 Pod。
 
 <!--

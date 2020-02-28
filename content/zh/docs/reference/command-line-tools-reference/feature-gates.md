@@ -381,7 +381,7 @@ Each feature gate is designed for enabling/disabling a specific feature:
 <!--
 - `Accelerators`: Enable Nvidia GPU support when using Docker
 - `AdvancedAuditing`: Enable [advanced auditing](/docs/tasks/debug-application-cluster/audit/#advanced-audit)
-- `AffinityInAnnotations`(*deprecated*): Enable setting [Pod affinity or anti-affinitys](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity).
+- `AffinityInAnnotations`(*deprecated*): Enable setting [Pod affinity or anti-affinitys](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity).
 - `AllowExtTrafficLocalEndpoints`: Enable a service to route external requests to node local endpoints.
 - `APIListChunking`: Enable the API clients to retrieve (`LIST` or `GET`) resources from API server in chunks.
 - `APIResponseCompression`: Compress the API responses for `LIST` or `GET` requests.
@@ -390,7 +390,7 @@ Each feature gate is designed for enabling/disabling a specific feature:
 -->
 - `Accelerators`：使用 Docker 时启用 Nvidia GPU 支持。
 - `AdvancedAuditing`：启用[高级审查功能](/docs/tasks/debug-application-cluster/audit/#advanced-audit)。
-- `AffinityInAnnotations`（*已弃用*）：启用 [Pod 亲和力或反亲和力](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity)。
+- `AffinityInAnnotations`（*已弃用*）：启用 [Pod 亲和力或反亲和力](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)。
 - `AllowExtTrafficLocalEndpoints`：启用服务用于将外部请求路由到节点本地终端。
 - `APIListChunking`：启用 API 客户端以块的形式从 API 服务器检索（“LIST” 或 “GET”）资源。
 - `APIResponseCompression`：压缩 “LIST” 或 “GET” 请求的 API 响应。

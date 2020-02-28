@@ -430,7 +430,7 @@ Kubernetes 目前不提供任何本地机制来将 AppArmor 配置文件加载�
 <!-- The scheduler is not aware of which profiles are loaded onto which node, so the full set of profiles
 must be loaded onto every node.  An alternative approach is to add a node label for each profile (or
 class of profiles) on the node, and use a
-[node selector](/docs/concepts/configuration/assign-pod-node/) to ensure the Pod is run on a
+[node selector](/docs/concepts/scheduling-eviction/assign-pod-node/) to ensure the Pod is run on a
 node with the required profile. -->
 调度程序不知道哪些配置文件加载到哪个节点上，因此必须将全套配置文件加载到每个节点上。另一种方法是为节点上的每个配置文件(或配置文件类)添加节点标签，并使用[节点选择器](/docs/concepts/configuration/assign pod node/)确保 Pod 在具有所需配置文件的节点上运行。
 

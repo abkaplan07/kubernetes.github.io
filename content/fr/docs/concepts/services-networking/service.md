@@ -701,7 +701,7 @@ Si un service est `.spec.externalTrafficPolicy` est réglé sur `Cluster`, l'adr
 En définissant `.spec.externalTrafficPolicy` à `Local`, les adresses IP des clients sont propagées aux pods finaux, mais cela peut entraîner une répartition inégale du trafic.
 Les nœuds sans pods pour un service LoadBalancer particulier échoueront au contrôle de santé du groupe cible NLB sur le `.spec.healthCheckNodePort` attribué automatiquement et ne recevront aucun trafic.
 
-Pour obtenir un trafic uniforme, utilisez un DaemonSet ou spécifiez un [pod anti-affinity](/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity) pour ne pas localiser sur le même noeud.
+Pour obtenir un trafic uniforme, utilisez un DaemonSet ou spécifiez un [pod anti-affinity](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) pour ne pas localiser sur le même noeud.
 
 Vous pouvez également utiliser les services NLB avec l'annotation [load balancer internal](/docs/concepts/services-networking/service/#internal-load-balancer).
 
