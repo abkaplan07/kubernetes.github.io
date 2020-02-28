@@ -112,7 +112,7 @@ kube-schedulerは、デフォルトで用意されているスケジューリン
 
 {{% /capture %}}
 {{% capture whatsnext %}}
-* [スケジューラーのパフォーマンスチューニング](/docs/concepts/scheduling/scheduler-perf-tuning/)を参照してください。
+* [スケジューラーのパフォーマンスチューニング](/docs/concepts/scheduling-eviction/scheduler-perf-tuning/)を参照してください。
 * kube-schedulerの[リファレンスドキュメント](/docs/reference/command-line-tools-reference/kube-scheduler/)を参照してください。
 * [複数のスケジューラーの設定](https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/)について学んでください。
 {{% /capture %}}

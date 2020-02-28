@@ -70,7 +70,7 @@ Job is a Kubernetes resource that runs a
 {{< glossary_tooltip term_id="pod" >}}, or perhaps several Pods, to carry out
 a task and then stop.
 
-(Once [scheduled](/docs/concepts/scheduling/), Pod objects become part of the
+(Once [scheduled](/docs/concepts/scheduling-eviction/), Pod objects become part of the
 desired state for a kubelet).
 
 When the Job controller sees a new task it makes sure that, somewhere
@@ -91,7 +91,7 @@ and eventually the work is done.
 
 Job 是一种 Kubernetes 资源，它运行一个 {{< glossary_tooltip term_id="pod" >}}，或者可能是多个 Pod，来执行一个任务然后停止。
 
-（一旦[被调度了](/docs/concepts/scheduling/)），对 kubelet 来说 Pod 对象就会变成了期望状态的一部分。
+（一旦[被调度了](/docs/concepts/scheduling-eviction/)），对 kubelet 来说 Pod 对象就会变成了期望状态的一部分。
 
 在集群中，当 Job 控制器拿到新任务时，它会保证一组 Node 节点上的 kubelet 可以运行正确数量的 Pod 来完成工作。
 Job 控制器不会自己运行任何的 Pod 或者容器。Job 控制器是通知 API 服务器来创建或者移除 Pod。

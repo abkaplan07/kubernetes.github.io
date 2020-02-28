@@ -18,7 +18,7 @@ weight: 70
 {{< feature-state for_k8s_version="1.14" state="beta" >}}
 
 <!--
-[kube-scheduler](/docs/concepts/scheduling/kube-scheduler/#kube-scheduler)
+[kube-scheduler](/docs/concepts/scheduling-eviction/kube-scheduler/#kube-scheduler)
 is the Kubernetes default scheduler. It is responsible for placement of Pods
 on Nodes in a cluster.
 -->
