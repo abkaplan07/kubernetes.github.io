@@ -138,7 +138,7 @@ nodeAffinity:
 ### 테인트(taints)와 톨러레이션(tolerations)
 
 데몬 파드는 
-[테인트와 톨러레이션](/docs/concepts/configuration/taint-and-toleration)을 존중하지만, 
+[테인트와 톨러레이션](/docs/concepts/scheduling-eviction/taint-and-toleration)을 존중하지만, 
 다음과 같이 관련 기능에 따라 자동적으로 데몬셋 파드에 
 톨러레이션을 추가한다.
 

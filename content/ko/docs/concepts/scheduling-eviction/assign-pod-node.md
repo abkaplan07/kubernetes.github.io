@@ -150,7 +150,7 @@ spec:
 
 예시에서 연산자 `In` 이 사용되고 있는 것을 볼 수 있다. 새로운 노드 어피니티 구문은 다음의 연산자들을 지원한다. `In`, `NotIn`, `Exists`, `DoesNotExist`, `Gt`, `Lt`.
 `NotIn` 과 `DoesNotExist` 를 사용해서 안티-어피니티를 수행하거나,
-특정 노드에서 파드를 쫓아내는 [노드 테인트(taint)](/docs/concepts/configuration/taint-and-toleration/)를 설정할 수 있다.
+특정 노드에서 파드를 쫓아내는 [노드 테인트(taint)](/docs/concepts/scheduling-eviction/taint-and-toleration/)를 설정할 수 있다.
 
 `nodeSelector` 와 `nodeAffinity` 를 모두 지정한다면 파드가 후보 노드에 스케줄 되기 위해서는
 *둘 다* 반드시 만족해야 한다.
@@ -386,7 +386,7 @@ spec:
 
 {{% capture whatsnext %}}
 
-[테인트](/docs/concepts/configuration/taint-and-toleration/)는 노드가 특정 파드들을 *쫓아내게* 할 수 있다.
+[테인트](/docs/concepts/scheduling-eviction/taint-and-toleration/)는 노드가 특정 파드들을 *쫓아내게* 할 수 있다.
 
 [노드 어피니티](https://git.k8s.io/community/contributors/design-proposals/scheduling/nodeaffinity.md)와
 [파드간 어피니티/안티-어피니티](https://git.k8s.io/community/contributors/design-proposals/scheduling/podaffinity.md)에 대한 디자인 문서에는

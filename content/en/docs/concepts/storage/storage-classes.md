@@ -172,7 +172,7 @@ requirements](/docs/concepts/configuration/manage-compute-resources-container),
 [node selectors](/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector),
 [pod affinity and
 anti-affinity](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity),
-and [taints and tolerations](/docs/concepts/configuration/taint-and-toleration).
+and [taints and tolerations](/docs/concepts/scheduling-eviction/taint-and-toleration).
 
 The following plugins support `WaitForFirstConsumer` with dynamic provisioning:
 

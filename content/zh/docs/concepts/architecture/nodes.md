@@ -151,11 +151,11 @@ Kubernetes causes all the Pod objects running on the node to be deleted from the
 
 <!--
 The node lifecycle controller automatically creates
-[taints](/docs/concepts/configuration/taint-and-toleration/) that represent conditions.
+[taints](/docs/concepts/scheduling-eviction/taint-and-toleration/) that represent conditions.
 When the scheduler is assigning a Pod to a Node, the scheduler takes the Node's taints
 into account, except for any taints that the Pod tolerates.
 -->
-节点生命周期控制器会自动创建代表条件的[污点](/docs/concepts/configuration/taint-and-toleration/)。
+节点生命周期控制器会自动创建代表条件的[污点](/docs/concepts/scheduling-eviction/taint-and-toleration/)。
 当调度器将 Pod 分配给节点时，调度器会考虑节点上的污点，但是 Pod 可以容忍的污点除外。
 
 <!--
@@ -373,7 +373,7 @@ Starting in Kubernetes 1.6, the NodeController is also responsible for evicting
 pods that are running on nodes with `NoExecute` taints, when the pods do not tolerate
 the taints. Additionally, as an alpha feature that is disabled by default, the
 NodeController is responsible for adding taints corresponding to node problems like
-node unreachable or not ready. See [this documentation](/docs/concepts/configuration/taint-and-toleration/)
+node unreachable or not ready. See [this documentation](/docs/concepts/scheduling-eviction/taint-and-toleration/)
 for details about `NoExecute` taints and the alpha feature.
 -->
 从 Kubernetes 1.6 开始，NodeController 还负责驱逐运行在拥有 `NoExecute` 污点的节点上的 pods，如果这些 pods 没有容忍这些污点。此外，作为一个默认禁用的 alpha 特性，NodeController 还负责根据节点故障（例如节点不可访问或没有 ready）添加污点。请查看[这个文档](/docs/concepts/scheduling-eviction/assign-pod-node/#taints-and-tolerations-beta-feature)了解关于 `NoExecute` 污点和这个 alpha 特性。

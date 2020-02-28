@@ -137,7 +137,7 @@ Node Affinityを使用したPodの例を以下に示します:
 
 この例ではオペレーター`In`が使われています。
 Node Affinityでは、`In`、`NotIn`、`Exists`、`DoesNotExist`、`Gt`、`Lt`のオペレーターが使用できます。
-`NotIn`と`DoesNotExist`はNode Anti-Affinity、またはPodを特定のNodeにスケジュールさせない場合に使われる[Taints](/docs/concepts/configuration/taint-and-toleration/)に使用します。
+`NotIn`と`DoesNotExist`はNode Anti-Affinity、またはPodを特定のNodeにスケジュールさせない場合に使われる[Taints](/docs/concepts/scheduling-eviction/taint-and-toleration/)に使用します。
 
 `nodeSelector`と`nodeAffinity`の両方を指定した場合、Podは**両方の**条件を満たすNodeにスケジュールされます。
 
@@ -361,7 +361,7 @@ spec:
 
 {{% capture whatsnext %}}
 
-[Taints](/docs/concepts/configuration/taint-and-toleration/)を使うことで、NodeはPodを追い出すことができます。
+[Taints](/docs/concepts/scheduling-eviction/taint-and-toleration/)を使うことで、NodeはPodを追い出すことができます。
 
 [Node Affinity](https://git.k8s.io/community/contributors/design-proposals/scheduling/nodeaffinity.md)と
 [Inter-Pod Affinity/Anti-Affinity](https://git.k8s.io/community/contributors/design-proposals/scheduling/podaffinity.md)

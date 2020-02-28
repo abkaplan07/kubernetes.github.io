@@ -82,7 +82,7 @@ permanently left a cluster, the cluster administrator may need to delete the nod
 Kubernetes causes all the Pod objects running on the node to be deleted from the apiserver, and frees up their names.
 
 The node lifecycle controller automatically creates
-[taints](/docs/concepts/configuration/taint-and-toleration/) that represent conditions.
+[taints](/docs/concepts/scheduling-eviction/taint-and-toleration/) that represent conditions.
 When the scheduler is assigning a Pod to a Node, the scheduler takes the Node's taints
 into account, except for any taints that the Pod tolerates.
 
@@ -222,7 +222,7 @@ Starting in Kubernetes 1.6, the NodeController is also responsible for evicting
 pods that are running on nodes with `NoExecute` taints, when the pods do not tolerate
 the taints. Additionally, as an alpha feature that is disabled by default, the
 NodeController is responsible for adding taints corresponding to node problems like
-node unreachable or not ready. See [this documentation](/docs/concepts/configuration/taint-and-toleration/)
+node unreachable or not ready. See [this documentation](/docs/concepts/scheduling-eviction/taint-and-toleration/)
 for details about `NoExecute` taints and the alpha feature.
 
 Starting in version 1.8, the node controller can be made responsible for creating taints that represent

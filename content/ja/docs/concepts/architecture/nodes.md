@@ -69,7 +69,7 @@ Ready conditionが`pod-eviction-timeout`に設定された時間を超えても`
 
 バージョン1.5よりも前のKubernetesでは、ノードコントローラーはAPIサーバーから到達不能なそれらのPodを[強制削除](/docs/concepts/workloads/pods/pod/#force-deletion-of-pods)していました。しかしながら、1.5以降では、ノードコントローラーはクラスター内でPodが停止するのを確認するまでは強制的に削除しないようになりました。到達不能なノード上で動いているPodは`Terminating`または`Unknown`のステータスになります。Kubernetesが基盤となるインフラストラクチャーを推定できない場合、クラスター管理者は手動でNodeオブジェクトを削除する必要があります。KubernetesからNodeオブジェクトを削除すると、そのノードで実行されているすべてのPodオブジェクトがAPIサーバーから削除され、それらの名前が解放されます。
 
-バージョン1.12において、`TaintNodesByCondition`機能がBetaに昇格し、それによってノードのライフサイクルコントローラーがconditionを表した[taint](/docs/concepts/configuration/taint-and-toleration/)を自動的に生成するようになりました。
+バージョン1.12において、`TaintNodesByCondition`機能がBetaに昇格し、それによってノードのライフサイクルコントローラーがconditionを表した[taint](/docs/concepts/scheduling-eviction/taint-and-toleration/)を自動的に生成するようになりました。
 同様に、スケジューラーがPodを配置するノードを検討する際、ノードのtaintとPodのtolerationsを見るかわりにconditionを無視するようになりました。
 
 ユーザーは、古いスケジューリングモデルか、新しくてより柔軟なスケジューリングモデルのどちらかを選択できるようになりました。
@@ -157,7 +157,7 @@ Kubernetes 1.4では、マスターに問題が発生した場合の対処方法
 
 Kubernetes 1.6以降では、ノードコントローラーは、Podがtaintを許容しない場合、 `NoExecute`のtaintを持つノード上で実行されているPodを排除する責務もあります。
 さらに、デフォルトで無効になっているアルファ機能として、ノードコントローラーはノードに到達できない、または準備ができていないなどのノードの問題に対応するtaintを追加する責務があります。
-`NoExecute`のtaint及び上述のアルファ機能に関する詳細は、[こちらのドキュメント](/docs/concepts/configuration/taint-and-toleration/)をご覧ください。
+`NoExecute`のtaint及び上述のアルファ機能に関する詳細は、[こちらのドキュメント](/docs/concepts/scheduling-eviction/taint-and-toleration/)をご覧ください。
 
 バージョン1.8以降、ノードコントローラーに対してノードの状態を表すtaintを作成する責務を持たせることができます。これはバージョン1.8のアルファ機能です。
 

@@ -286,10 +286,10 @@ value is `another-node-label-value` should be preferred.
 <!--
 You can see the operator `In` being used in the example. The new node affinity syntax supports the following operators: `In`, `NotIn`, `Exists`, `DoesNotExist`, `Gt`, `Lt`.
 You can use `NotIn` and `DoesNotExist` to achieve node anti-affinity behavior, or use
-[node taints](/docs/concepts/configuration/taint-and-toleration/) to repel pods from specific nodes.
+[node taints](/docs/concepts/scheduling-eviction/taint-and-toleration/) to repel pods from specific nodes.
 -->
 
-你可以在上面的例子中看到 `In` 操作符的使用。新的节点亲和语法支持下面的操作符： `In`，`NotIn`，`Exists`，`DoesNotExist`，`Gt`，`Lt`。你可以使用 `NotIn` 和 `DoesNotExist` 来实现节点反亲和行为，或者使用[节点污点](/docs/concepts/configuration/taint-and-toleration/)将 pod 从特定节点中驱逐。
+你可以在上面的例子中看到 `In` 操作符的使用。新的节点亲和语法支持下面的操作符： `In`，`NotIn`，`Exists`，`DoesNotExist`，`Gt`，`Lt`。你可以使用 `NotIn` 和 `DoesNotExist` 来实现节点反亲和行为，或者使用[节点污点](/docs/concepts/scheduling-eviction/taint-and-toleration/)将 pod 从特定节点中驱逐。
 
 <!--
 If you specify both `nodeSelector` and `nodeAffinity`, *both* must be satisfied for the pod
@@ -666,10 +666,10 @@ The above pod will run on the node kube-01.
 {{% capture whatsnext %}}
 
 <!--
-[Taints](/docs/concepts/configuration/taint-and-toleration/) allow a Node to *repel* a set of Pods.
+[Taints](/docs/concepts/scheduling-eviction/taint-and-toleration/) allow a Node to *repel* a set of Pods.
 -->
 
-[污点](/docs/concepts/configuration/taint-and-toleration/)允许节点*排斥*一组 pod。
+[污点](/docs/concepts/scheduling-eviction/taint-and-toleration/)允许节点*排斥*一组 pod。
 
 <!--
 The design documents for

@@ -148,7 +148,7 @@ mengabaikan Node `unschedulable` ketika menjadwalkan Pod DaemonSet.
 ### _Taint_ dan _Toleration_
 
 Meskipun Pod Daemon menghormati
-[taint dan toleration](/docs/concepts/configuration/taint-and-toleration),
+[taint dan toleration](/docs/concepts/scheduling-eviction/taint-and-toleration),
 _toleration_ berikut ini akan otomatis ditambahkan ke Pod DaemonSet sesuai
 dengan fitur yang bersangkutan.
 

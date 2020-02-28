@@ -74,7 +74,7 @@ Kubernetes fa sì che tutti gli oggetti Pod in esecuzione sul nodo vengano elimi
 
 
 Nella versione 1.12, la funzione `TaintNodesByCondition` è promossa in versione beta, quindi il controller del ciclo di vita del nodo crea automaticamente
-[taints](/docs/concepts/configuration/taint-and-toleration/) che rappresentano le condizioni.
+[taints](/docs/concepts/scheduling-eviction/taint-and-toleration/) che rappresentano le condizioni.
 Allo stesso modo lo schedulatore ignora le condizioni quando si considera un nodo; anziché
 guarda le tinte del Nodo e le tolleranze di un Pod.
 
@@ -208,7 +208,7 @@ A partire da Kubernetes 1.6, il NodeController è anche responsabile della rimoz
 i pod che sono in esecuzione sui nodi con `NoExecute`, quando i pod non tollerano
 i taints. Inoltre, come caratteristica alfa che è disabilitata per impostazione predefinita, il
 NodeController è responsabile per l'aggiunta di taints corrispondenti ai problemi del nodo come
-nodo irraggiungibile o non pronto. Vedi [questa documentazione](/docs/concepts/configuration/taint-and-toleration/)
+nodo irraggiungibile o non pronto. Vedi [questa documentazione](/docs/concepts/scheduling-eviction/taint-and-toleration/)
 per i dettagli su `NoExecute` taints e la funzione alpha.
 
 partire dalla versione 1.8, il controller del nodo può essere reso responsabile della creazione di taints che rappresentano le condizioni del nodo.

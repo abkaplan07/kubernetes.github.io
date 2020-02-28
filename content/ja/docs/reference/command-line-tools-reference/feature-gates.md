@@ -357,7 +357,7 @@ GAになってからさらなる変更を加えることは現実的ではない
 - `SupportIPVSProxyMode`: IPVSを使用したクラスター内サービスの負荷分散の提供を有効にします。詳細は[サービスプロキシ](/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies)で確認できます。
 - `SupportPodPidsLimit`: PodのPID制限のサポートを有効にします。
 - `Sysctls`: 各podに設定できる名前空間付きのカーネルパラメーター(sysctl)のサポートを有効にします。詳細は[sysctls](/docs/tasks/administer-cluster/sysctl-cluster/)で確認できます。
-- `TaintBasedEvictions`: ノードの汚染とpodの許容に基づいてノードからpodを排除できるようにします。。詳細は[汚染と許容](/docs/concepts/configuration/taint-and-toleration/)で確認できます。
+- `TaintBasedEvictions`: ノードの汚染とpodの許容に基づいてノードからpodを排除できるようにします。。詳細は[汚染と許容](/docs/concepts/scheduling-eviction/taint-and-toleration/)で確認できます。
 - `TaintNodesByCondition`: [ノードの条件](/docs/concepts/architecture/nodes/#condition)に基づいてノードの自動汚染を有効にします。
 - `TokenRequest`: サービスアカウントリソースで`TokenRequest`エンドポイントを有効にします。
 - `TokenRequestProjection`: [投影ボリューム](/docs/concepts/storage/volumes/#projected)を使用したpodへのサービスアカウントのトークンの注入を有効にします。

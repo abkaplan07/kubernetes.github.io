@@ -79,7 +79,7 @@ ready 컨디션의 상태가 [kube-controller-manager](/docs/admin/kube-controll
 노드 상에서 동작중인 모든 파드 오브젝트가 apiserver로부터 삭제되어 그 이름을 사용할 수 있는 결과를 낳는다.
 
 노드 수명주기 컨트롤러는 자동으로 컨디션을 나타내는
-[테인트(taints)](/docs/concepts/configuration/taint-and-toleration/)를 생성한다.
+[테인트(taints)](/docs/concepts/scheduling-eviction/taint-and-toleration/)를 생성한다.
 스케줄러가 파드를 노드에 할당할 때, 스케줄러는 파드가 극복(tolerate)하는 테인트가
 아닌 한, 노드 계정의 테인트를 고려 한다.
 
@@ -220,7 +220,7 @@ kubelet은 `NodeStatus` 와 리스 오브젝트를 생성하고 업데이트 할
 지고 있다. 추가로, 기본적으로 비활성화 된 알파 기능으로, NodeController는 노드 접근 불가 
 또는 준비 부족과 같은 노드 문제에 상응하는 taint 추가에 대한 책임을 진다.  
 `NoExecute` taints와 알파 기능에 대한 보다 상세한 
-내용은 [이 문서](/docs/concepts/configuration/taint-and-toleration/)를 참고한다.
+내용은 [이 문서](/docs/concepts/scheduling-eviction/taint-and-toleration/)를 참고한다.
 
 1.8 버전을 시작으로, 노드 컨트롤러는 노드 상태를 나타내는 taint 생성에 대한 책임을 지도록 
 만들 수 있다. 이는 버전 1.8 의 알파 기능이다.

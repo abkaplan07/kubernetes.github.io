@@ -72,7 +72,7 @@ Namun, pada versi 1.5 dan seterusnya, kontroler node tidak menghilangkan pod den
 Pada kasus dimana Kubernetes tidak bisa menarik kesimpulan bahwa ada node yang telah meninggalkan klaster, admin klaster mungkin perlu untuk menghilangkan node secara manual.
 Menghilangkan obyek node dari Kubernetes akan membuat semua pod yang berjalan pada node tersebut dihilangkan oleh apiserver, dan membebaskan nama-namanya agar bisa digunakan kembali.
 
-Pada versi 1.12, fitur `TaintNodesByCondition` telah dipromosikan ke beta, sehingga kontroler <i>lifecycle</i> node secara otomatis membuat [taints](/docs/concepts/configuration/taint-and-toleration/) yang merepresentasikan <i>conditions</i>.
+Pada versi 1.12, fitur `TaintNodesByCondition` telah dipromosikan ke beta, sehingga kontroler <i>lifecycle</i> node secara otomatis membuat [taints](/docs/concepts/scheduling-eviction/taint-and-toleration/) yang merepresentasikan <i>conditions</i>.
 Akibatnya, <i>scheduler</i> menghiraukan <i>conditions</i> ketika mempertimbangkan sebuah Node; <i>scheduler</i> akan melihat pada <i>taints</i> sebuah Node dan <i>tolerations</i> sebuah Pod.
 
 Sekarang, para pengguna dapat memilih antara model <i>scheduling</i> yang lama dan model <i>scheduling</i> yang lebih fleksibel.
@@ -164,7 +164,7 @@ Pada kasus ini, kontroler node berasumsi ada masalah pada jaringan master, dan m
 
 Mulai dari Kubernetes 1.6, kontroler node juga bertanggung jawab untuk melakukan <i>eviction</i> pada pod-pod yang berjalan di atas node dengan <i>taints</i> `NoExecute`, ketika pod-pod tersebut sudah tidak lagi <i>tolerate</i> terhadap <i>taints</i>.
 Sebagai tambahan, hal ini di-nonaktifkan secara <i>default</i> pada fitur alpha, kontroler node bertanggung jawab untuk menambahkan <i>taints</i> yang berhubungan dengan masalah pada node, seperti terputus atau `NotReady`.
-Lihat [dokumentasi ini](/docs/concepts/configuration/taint-and-toleration/) untuk bahasan detail tentang <i>taints</i> `NoExecute` dan fitur alpha.
+Lihat [dokumentasi ini](/docs/concepts/scheduling-eviction/taint-and-toleration/) untuk bahasan detail tentang <i>taints</i> `NoExecute` dan fitur alpha.
 
 Mulai dari versi 1.8, kontroler node bisa diatur untuk bertanggung jawab pada pembuatan <i>taints</i> yang merepresentasikan node <i>condition</i>.
 Ini merupakan fitur alpha untuk versi 1.8.

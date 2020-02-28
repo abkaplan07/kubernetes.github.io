@@ -75,7 +75,7 @@ Vous pouvez voir que les pods en cours d'exécution sur un nœud inaccessible so
 Dans les cas où Kubernetes ne peut pas déduire de l'infrastructure sous-jacente si un nœud a définitivement quitté un cluster, l'administrateur du cluster peut avoir besoin de supprimer l'objet nœud à la main.
 La suppression de l'objet nœud de Kubernetes entraîne la suppression de tous les objets Pod exécutés sur le nœud de l'apiserver et libère leurs noms.
 
-Dans la version 1.12, la fonctionnalité `TaintNodesByCondition` est promue en version bêta, ce qui permet au contrôleur de cycle de vie du nœud de créer automatiquement des [marquages](/docs/concepts/configuration/taint-and-toleration/)  (taints en anglais) qui représentent des conditions.
+Dans la version 1.12, la fonctionnalité `TaintNodesByCondition` est promue en version bêta, ce qui permet au contrôleur de cycle de vie du nœud de créer automatiquement des [marquages](/docs/concepts/scheduling-eviction/taint-and-toleration/)  (taints en anglais) qui représentent des conditions.
 De même, l'ordonnanceur ignore les conditions lors de la prise en compte d'un nœud; au lieu de cela, il regarde les taints du nœud et les tolérances d'un pod.
 
 Les utilisateurs peuvent désormais choisir entre l'ancien modèle de planification et un nouveau modèle de planification plus flexible.
@@ -167,7 +167,7 @@ Dans ce cas, le contrôleur de noeud suppose qu'il existe un problème de connec
 
 À partir de Kubernetes 1.6, NodeController est également responsable de l'expulsion des pods s'exécutant sur des noeuds avec des marques `NoExecute`, lorsque les pods ne tolèrent pas ces marques.
 De plus, en tant que fonctionnalité alpha désactivée par défaut, NodeController est responsable de l'ajout de marques correspondant aux problèmes de noeud tels que les noeuds inaccessibles ou non prêts.
-Voir [cette documentation](/docs/concepts/configuration/taint-and-toleration/) pour plus de détails sur les marques `NoExecute` et cette fonctionnalité alpha.
+Voir [cette documentation](/docs/concepts/scheduling-eviction/taint-and-toleration/) pour plus de détails sur les marques `NoExecute` et cette fonctionnalité alpha.
 
 À partir de la version 1.8, le contrôleur de noeud peut être chargé de créer des tâches représentant les conditions de noeud.
 Ceci est une fonctionnalité alpha de la version 1.8.

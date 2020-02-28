@@ -247,13 +247,13 @@ automatically to DaemonSet Pods. The default scheduler ignores
 ### Taints and Tolerations
 
 Although Daemon Pods respect
-[taints and tolerations](/docs/concepts/configuration/taint-and-toleration),
+[taints and tolerations](/docs/concepts/scheduling-eviction/taint-and-toleration),
 the following tolerations are added to DaemonSet Pods automatically according to
 the related features.
 -->
 ### 污点和容忍度
 
-尽管 Daemon Pods 遵循[污点和容忍度](/docs/concepts/configuration/taint-and-toleration) 规则，根据相关特性，会自动将以下容忍度添加到 DaemonSet Pods 中。
+尽管 Daemon Pods 遵循[污点和容忍度](/docs/concepts/scheduling-eviction/taint-and-toleration) 规则，根据相关特性，会自动将以下容忍度添加到 DaemonSet Pods 中。
 
 | 容忍度关键词                         | 影响     | 版本 | 描述                                                  |
 | ---------------------------------------- | ---------- | ------- | ------------------------------------------------------------ |

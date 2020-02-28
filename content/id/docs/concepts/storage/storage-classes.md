@@ -152,7 +152,7 @@ oleh mekanisme _scheduling_ Pod. Hal ini termasuk, tetapi tidak hanya terbatas p
 [_node selector_](/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector),
 [afinitas dan
 anti-afinitas Pod](/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity),
-serta [_taint_ dan _toleration_](/docs/concepts/configuration/taint-and-toleration).
+serta [_taint_ dan _toleration_](/docs/concepts/scheduling-eviction/taint-and-toleration).
 
 Beberapa _plugin_ di bawah ini mendukung `WaitForFirstConsumer` dengan _provisioning_
 dinamis:

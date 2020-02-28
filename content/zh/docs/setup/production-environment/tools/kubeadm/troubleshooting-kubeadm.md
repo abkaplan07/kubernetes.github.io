@@ -622,7 +622,7 @@ the field will be omitted when marshalling. When the field is omitted, kubeadm a
 
 There are at least two workarounds:
 
-1. Use the `role.kubernetes.io/master:PreferNoSchedule` taint instead of an empty slice. [Pods will get scheduled on masters](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/), unless other nodes have capacity.
+1. Use the `role.kubernetes.io/master:PreferNoSchedule` taint instead of an empty slice. [Pods will get scheduled on masters](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/), unless other nodes have capacity.
 
 2. Remove the taint after kubeadm init exits:
 ```bash
@@ -640,7 +640,7 @@ kubectl taint nodes NODE_NAME role.kubernetes.io/master:NoSchedule-
 至少有两种解决方法：
 
 1. 使用 `role.kubernetes.io/master:PreferNoSchedule` 污点代替空切片。
-除非其他节点具有容量，[否则将在主节点上调度 Pods](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)。
+除非其他节点具有容量，[否则将在主节点上调度 Pods](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)。
 
 2. 在 kubeadm init 退出后删除污点：
 ```bash

@@ -144,7 +144,7 @@ automatically to DaemonSet Pods. The default scheduler ignores
 ### Taints and Tolerations
 
 Although Daemon Pods respect
-[taints and tolerations](/docs/concepts/configuration/taint-and-toleration),
+[taints and tolerations](/docs/concepts/scheduling-eviction/taint-and-toleration),
 the following tolerations are added to DaemonSet Pods automatically according to
 the related features.
 

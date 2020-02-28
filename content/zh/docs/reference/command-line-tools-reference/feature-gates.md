@@ -640,15 +640,15 @@ Each feature gate is designed for enabling/disabling a specific feature:
 - `Sysctls`：启用对可以为每个 Pod 设置的命名空间内核参数（sysctls）的支持。有关更多详细信息，请参见 [sysctls](/docs/tasks/administer-cluster/sysctl-cluster/)。
 <!--
 - `TaintBasedEvictions`: Enable evicting pods from nodes based on taints on nodes and tolerations on Pods.
-  See [taints and tolerations](/docs/concepts/configuration/taint-and-toleration/) for more details.
+  See [taints and tolerations](/docs/concepts/scheduling-eviction/taint-and-toleration/) for more details.
 - `TaintNodesByCondition`: Enable automatic tainting nodes based on [node conditions](/docs/concepts/architecture/nodes/#condition).
 - `TokenRequest`: Enable the `TokenRequest` endpoint on service account resources.
 - `TokenRequestProjection`: Enable the injection of service account tokens into
   a Pod through the [`projected` volume](/docs/concepts/storage/volumes/#projected).
 - `TTLAfterFinished`: Allow a [TTL controller](/docs/concepts/workloads/controllers/ttlafterfinished/) to clean up resources after they finish execution.
 -->
-- `TaintBasedEvictions`：根据节点上的污点和 Pod 上的容忍度启用从节点驱逐 Pod 的功能。有关更多详细信息，请参见[污点和容忍度](/docs/concepts/configuration/taint-and-toleration/)。
-- `TaintNodesByCondition`：根据[节点条件](/docs/concepts/configuration/taint-and-toleration/)启用自动在节点标记污点。
+- `TaintBasedEvictions`：根据节点上的污点和 Pod 上的容忍度启用从节点驱逐 Pod 的功能。有关更多详细信息，请参见[污点和容忍度](/docs/concepts/scheduling-eviction/taint-and-toleration/)。
+- `TaintNodesByCondition`：根据[节点条件](/docs/concepts/scheduling-eviction/taint-and-toleration/)启用自动在节点标记污点。
 - `TokenRequest`：在服务帐户资源上启用 `TokenRequest` 端点。
 - `TokenRequestProjection`：启用通过 [`projected` 卷](/docs/concepts/storage/volumes/#projected) 将服务帐户令牌注入到 Pod 中的功能。
 - `TTLAfterFinished`：完成执行后，允许 [TTL 控制器](/docs/concepts/workloads/controllers/ttlafterfinished/)清理资源。

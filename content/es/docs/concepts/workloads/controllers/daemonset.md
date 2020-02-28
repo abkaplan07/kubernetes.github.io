@@ -154,7 +154,7 @@ a los Pods del DaemonSet. Así, el planificador por defecto ignora los nodos
 ### Contaminaciones (taints) y Tolerancias (tolerations)
 
 A pesar de que los Pods de proceso respetan las
-[contaminaciones y tolerancias](/docs/concepts/configuration/taint-and-toleration),
+[contaminaciones y tolerancias](/docs/concepts/scheduling-eviction/taint-and-toleration),
 la siguientes tolerancias son añadidas a los Pods del DaemonSet de forma automática
 según las siguientes características:
 

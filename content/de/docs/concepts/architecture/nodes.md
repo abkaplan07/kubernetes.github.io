@@ -73,7 +73,7 @@ In der Zwischenzeit können Pods, deren Löschen geplant ist, weiterhin auf dem 
 In Versionen von Kubernetes vor 1.5 würde der Node Controller das Löschen dieser unerreichbaren Pods vom Apiserver [erzwingen](/docs/concepts/workloads/pods/pod/#force-deletion-of-pods). In Version 1.5 und höher erzwingt der Node Controller jedoch keine Pod Löschung, bis bestätigt wird, dass sie nicht mehr im Cluster ausgeführt werden. Pods die auf einem unzugänglichen Node laufen sind eventuell in einem einem `Terminating` oder `Unkown` Status. In Fällen, in denen Kubernetes nicht aus der zugrunde liegenden Infrastruktur schließen kann, ob ein Node einen Cluster dauerhaft verlassen hat, muss der Clusteradministrator den Node möglicherweise manuell löschen.
 Das Löschen des Kubernetes-Nodeobjekts bewirkt, dass alle auf dem Node ausgeführten Pod-Objekte gelöscht und deren Namen freigegeben werden.
 
-In Version 1.12 wurde die Funktion `TaintNodesByCondition` als Beta-Version eingeführt, die es dem Node-Lebenszyklus-Controller ermöglicht, automatisch [Markierungen](/docs/concepts/configuration/taint-and-toleration/) (*taints* in Englisch) zu erstellen, die Bedingungen darstellen.
+In Version 1.12 wurde die Funktion `TaintNodesByCondition` als Beta-Version eingeführt, die es dem Node-Lebenszyklus-Controller ermöglicht, automatisch [Markierungen](/docs/concepts/scheduling-eviction/taint-and-toleration/) (*taints* in Englisch) zu erstellen, die Bedingungen darstellen.
 
 Ebenso ignoriert der Scheduler die Bedingungen, wenn er einen Node berücksichtigt; stattdessen betrachtet er die Markierungen (taints) des Nodes und die Toleranzen eines Pod.
 
@@ -179,7 +179,7 @@ In diesem Fall geht der Node-Controller davon aus, dass es ein Problem mit der M
 
 Ab Kubernetes 1.6 ist der Node-Controller auch für die Entfernung von Pods zuständig, die auf Nodes mit `NoExecute`-Taints laufen, wenn die Pods die Markierungen nicht tolerieren.
 Zusätzlich ist der NodeController als Alpha-Funktion, die standardmäßig deaktiviert ist, dafür verantwortlich, Taints hinzuzufügen, die Node Probleme, wie `Node unreachable` oder `not ready` entsprechen.
-Siehe [diese Dokumentation](/docs/concepts/configuration/taint-and-toleration/) für Details über `NoExecute` Taints und die Alpha-Funktion.
+Siehe [diese Dokumentation](/docs/concepts/scheduling-eviction/taint-and-toleration/) für Details über `NoExecute` Taints und die Alpha-Funktion.
 
 
 Ab Version 1.8 kann der Node-Controller für die Erzeugung von Taints, die Node Bedingungen darstellen, verantwortlich gemacht werden. Dies ist eine Alpha-Funktion der Version 1.8.

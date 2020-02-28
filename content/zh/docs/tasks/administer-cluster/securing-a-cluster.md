@@ -232,7 +232,7 @@ to the metadata API, and avoid using provisioning data to deliver secrets.
 
 By default, there are no restrictions on which nodes may run a pod.  Kubernetes offers a
 [rich set of policies for controlling placement of pods onto nodes](/docs/concepts/scheduling-eviction/assign-pod-node/)
-and the [taint based pod placement and eviction](/docs/concepts/configuration/taint-and-toleration/)
+and the [taint based pod placement and eviction](/docs/concepts/scheduling-eviction/taint-and-toleration/)
 that are available to end users. For many clusters use of these policies to separate workloads
 can be a convention that authors adopt or enforce via tooling.
 
@@ -242,7 +242,7 @@ alter namespaces, this can strongly limit the placement of all of the pods in a 
 -->
 ### 控制 pod 可以访问那些节点
 
-默认情况下，对哪些节点可以运行 pod 没有任何限制。Kubernetes 给最终用户提供了[一组丰富的策略用于控制 pod 放在节点上的位置](/docs/concepts/scheduling-eviction/assign-pod-node/)，以及[基于 pod 位置和驱逐的污点](/docs/concepts/configuration/taint-and-toleration/)。对于许多集群，可以约定由作者采用或者强制通过工具使用这些策略来分离工作负载。
+默认情况下，对哪些节点可以运行 pod 没有任何限制。Kubernetes 给最终用户提供了[一组丰富的策略用于控制 pod 放在节点上的位置](/docs/concepts/scheduling-eviction/assign-pod-node/)，以及[基于 pod 位置和驱逐的污点](/docs/concepts/scheduling-eviction/taint-and-toleration/)。对于许多集群，可以约定由作者采用或者强制通过工具使用这些策略来分离工作负载。
 
 作为管理员，β 特性的准入插件 `PodNodeSelector` 可用于强制命名空间中的 pod 使用默认或需要使用特定的节点选择器。如果最终用户无法改变命名空间，这可以强烈地限制所有的 pod 在特定工作负载的位置。
 

@@ -2,7 +2,7 @@
 title: Taint
 id: taint
 date: 2019-26-11
-full_link: /docs/concepts/configuration/taint-and-toleration/
+full_link: /docs/concepts/scheduling-eviction/taint-and-toleration/
 short_description: >
   Là một đối tượng bao gồm ba thuộc tính bắt buộc: key, value, và effect. Taints (dấu chờ) ngăn cản việc lập lịch cho các pod chạy trên các node hay nhóm các node.
 
